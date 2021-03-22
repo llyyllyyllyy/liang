@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js">
+			
+		</script>
+	</head>
+	<body>
+		<div id="app">
+			<li>你的成绩是:{{ff}}</li>
+			<li v-if='score>=90'>优秀</li>
+			<li v-if='score>=80 && score<90'>良好</li>
+			<li v-if='score>=70 && score<80'>一般</li>
+			<li v-if='score>=60 && score<70'>合格</li>
+			<li v-if='score<60'>不合格</li>
+		</div>
+		<script type="text/javascript">
+			var vm = new Vue({
+				el:'#app',
+				data (){
+					return{
+						score:'99'
+						
+					}
+				}
+			})
+		</script>
+	</body>
+</html>
