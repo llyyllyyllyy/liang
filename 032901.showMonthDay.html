@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+	</head>
+	<body>
+		<div id="app">
+			请输入月份：<br />
+			<input  type="text" v-model="userName" id="" name=""/><br />
+			<li v-if="userName=='1'">31天</li>
+			<li v-if="userName=='2'">28天</li>
+			<li v-if="userName=='3'">31天</li>
+			<li v-if="userName=='4'">30天</li>
+			<li v-if="userName=='5'">31天</li>
+			<li v-if="userName=='6'">30天</li>
+			<li v-if="userName=='7'">31天</li>
+			<li v-if="userName=='8'">31天</li>
+			<li v-if="userName=='9'">30天</li>
+			<li v-if="userName=='10'">31天</li>
+			<li v-if="userName=='11'">30天</li>
+			<li v-if="userName=='12'">31天</li>
+		</div>
+		<script type="text/javascript">
+			var vm = new Vue({
+				el:'#app',
+				data (){
+					return{
+						userName:''
+					}
+				}
+			}
+			)
+		</script>
+	</body>
+</html>
