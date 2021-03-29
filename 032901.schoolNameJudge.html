@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+	</head>
+	<body>
+		<div id="app">
+			请输入大学名：<br />
+			<input  type="text" v-model="userName" id="" name=""/><br />
+			<li v-if="userName=='清华大学'">985、211大学</li>
+			<li v-if="userName=='北京大学'">985、211大学</li>
+			<li v-if="userName=='厦门大学'">985、211大学</li>
+			<li v-if="userName=='南开大学'">985、211大学</li>
+			<li v-if="userName=='济南大学'">985、211大学</li>
+		</div>
+		<script type="text/javascript">
+			var vm = new Vue({
+				el:'#app',
+				data (){
+					return{
+						userName:''
+					}
+				}
+			}
+			)
+		</script>
+	</body>
+</html>
