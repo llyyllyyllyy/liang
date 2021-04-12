@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>以数组的形式输出月份</title>
+		<script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+		<!-- <script src="js/vue.js" type="text/javascript" charset="utf-8"></script> -->
+	</head>
+	<body>
+		<div id="app">
+			<div v-for="student in students" >
+				
+				{{student}}
+			</div>
+			
+		</div>
+		<script type="text/javascript">
+			let v=new Vue({
+				el:'#app',
+				data:{
+					userNumber:'1',
+					students:[
+						{name:'贺朝'},
+						{name:'谢俞'},
+						{name:'江添'},
+						{name:'盛望'}
+					]
+				}
+			})
+		</script>
+	</body>
+</html>
