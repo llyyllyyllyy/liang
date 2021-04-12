@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>每次点击按钮，抽选一位幸运用户</title>
+		<script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+	</head>
+	<body>
+		<div id="app">
+			<input type="button" @click="rdmNumber=Math.ceil(Math.random()*10)%6+1;" name="" id="" value="随机抽选" /><br>
+			<div v-for="student in students" >
+				<div v-if="rdmNumber==student.code">
+					姓名是：{{student.name}}
+					<br>
+					学号是：{{student.code}}
+				</div>
+				
+			</div>
+			<!-- {{students[rdmNumber]}} -->
+		</div>
+		<script type="text/javascript">
+			let v=new Vue({
+				el:'#app',
+				data:{
+					rdmNumber:'',
+					students:[
+						{name:'贺朝',code:'1'},
+						{name:'谢俞',code:'2'},
+						{name:'江添',code:'3'},
+						{name:'盛望',code:'4'},
+						{name:'蒋丞',code:'5'},
+						{name:'顾飞',code:'6'}
+					]
+				}
+			})
+		</script>
+	</body>
+</html>

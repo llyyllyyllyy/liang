@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>输入国家代码，显示对应国家名、首都、国家代码</title>
+		<script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+	</head>
+	<body>
+		<div id="app">
+			请输入要查询的国家代码：
+			<br>
+			<input type="text" v-model="userNumber" name="" id="" value="" />
+			<div v-for="country in countrys" >
+				<div v-if="userNumber==country.code">
+					国家是：{{country.name}}
+					<br>
+					首都是：{{country.shoudu}}
+					<br>
+					国家代码是：{{country.code}}
+				</div>
+				
+			</div>
+			
+		</div>
+		<script type="text/javascript">
+			let v=new Vue({
+				el:'#app',
+				data:{
+					userNumber:'',
+					countrys:[
+						{name:'中国',shoudu:'北京',code:'1'},
+						{name:'美国',shoudu:'华盛顿',code:'2'},
+						{name:'英国',shoudu:'伦敦',code:'3'},
+						{name:'法国',shoudu:'巴黎',code:'4'},
+						{name:'俄罗斯',shoudu:'莫斯科',code:'5'}
+					]
+				}
+			})
+		</script>
+	</body>
+</html>
